@@ -7,7 +7,11 @@ currentDate = datetime.datetime.now()
 currentDate = currentDate.year
 
 access = config.db.cursor()
-access.execute("SELECT * FROM tblinvoices WHERE status = 'Unpaid' AND duedate > CURDATE()-7;")
+access.execute("SELECT value FROM tblconfiguration WHERE setting = AutoTerminationDays;")
+terminateConf = access.fetchall()
+
+access = config.db.cursor()
+access.execute("SELECT * FROM tblinvoices WHERE status = 'Unpaid' AND duedate = CURDATE()-{};".format(terminateConf))
 resultInvoice = access.fetchall()
 for x in resultInvoice:
     sql = "SELECT * FROM tblclients WHERE id = %s"
