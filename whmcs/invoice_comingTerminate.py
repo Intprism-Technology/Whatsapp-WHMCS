@@ -7,7 +7,7 @@ currentDate = datetime.datetime.now()
 currentDate = currentDate.year
 
 access = config.db.cursor()
-access.execute("")
+access.execute("SELECT * FROM tblinvoices WHERE status = 'Unpaid' AND duedate > CURDATE()-7;")
 resultInvoice = access.fetchall()
 for x in resultInvoice:
     sql = "SELECT * FROM tblclients WHERE id = %s"
