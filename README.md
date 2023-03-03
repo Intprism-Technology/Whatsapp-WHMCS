@@ -6,6 +6,7 @@
     - Invoice Terbit
     - Invoice Paid
     - Invoice DueDate
+    - Last Notification 1day Before Terminate
 
 # Requirements
 - NodeJS V18
