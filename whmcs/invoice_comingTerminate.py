@@ -9,9 +9,10 @@ currentDate = currentDate.year
 access = config.db.cursor()
 access.execute("SELECT value FROM tblconfiguration WHERE setting = AutoTerminationDays;")
 terminateConf = access.fetchall()
+dayBeforeTerminate = 1
 
 access = config.db.cursor()
-access.execute("SELECT * FROM tblinvoices WHERE status = 'Unpaid' AND duedate = CURDATE()-{};".format(terminateConf))
+access.execute("SELECT * FROM tblinvoices WHERE status = 'Unpaid' AND duedate = CURDATE()-{};".format(terminateConf-dayBeforeTerminate))
 resultInvoice = access.fetchall()
 for x in resultInvoice:
     sql = "SELECT * FROM tblclients WHERE id = %s"
