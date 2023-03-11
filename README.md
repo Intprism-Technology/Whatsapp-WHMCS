@@ -79,6 +79,7 @@
     */5 * * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_paid.py
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_unpaid.py
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_duedate.py
+    0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_comingTerminate.py
     ```
 # Endpoint
 - API Endpoint
