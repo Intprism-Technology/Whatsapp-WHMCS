@@ -56,6 +56,7 @@
     invoice_unpaid = "Halo, *{firstName} {lastName}*"
     invoice_paid = "Halo, *{firstName} {lastName}*"
     invoice_duedate = "Halo, *{firstName} {lastName}*"
+    invoice_comingTerminate = "Halo, *{firstName} {lastName}*"
     ```
 - Login Whatsapp
     sebagai contoh, instalasi di path /var/www/Whatsapp-WHMCS
