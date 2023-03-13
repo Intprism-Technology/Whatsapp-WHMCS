@@ -69,7 +69,7 @@
 - Whatsapp BOT & API
     - edit cron
     ```
-    @reboot /usr/local/bin/node /var/www/Whatsapp-WHMCS/index.js &
+    @reboot sleep 5 && /usr/local/bin/node /var/www/Whatsapp-WHMCS/index.js &
     ```
     - jalankan service ulang 
     ```
