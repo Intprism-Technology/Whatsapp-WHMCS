@@ -18,6 +18,8 @@ for x in resultInvoice:
         lastName = user[3]
         phone = user[12].replace('.', '').replace('-', '')
         invoiceNumber = x[2]
+        if invoiceNumber == "":
+            invoiceNumber = x[0]
         messageToSend = template_message.invoice_duedate.format(firstName = firstName,lastName = lastName,phone = phone, invoiceNumber = invoiceNumber, duedate = str(x[4]), duetotal= x[13])
         url = 'http://127.0.0.1:8080/api/send'
         data = {'phone': phone, 'message': messageToSend}
