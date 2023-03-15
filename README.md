@@ -100,5 +100,10 @@ Warga Diskusiwebhosting bisa request langsung melalui thread ))
     https://www.diskusiwebhosting.com/threads/whatsapp-api-dan-notifikasi-whmcs.38061/
 
 
-# Donation
-mau tapi malu ahaha
+# Support
+- - - - - - - - - - - - - - - -
+BCA : 3151176150
+BCA Digital: 001339859866
+Jago : 506512637291
+Paypal: info@intprism.com
+- - - - - - - - - - - - - - - -
