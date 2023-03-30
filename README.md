@@ -1,4 +1,7 @@
 # Introduction
+## Changelog
+- 30/03/2023 Update unpaid invoice from date to create date, so every invoice generate its will send to customer. important update !
+
 ## Features
 - [OK] API Kirim Pesan ke Nomor
 - [OK] Auto Response / BOT
