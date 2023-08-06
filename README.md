@@ -1,7 +1,7 @@
 # Introduction
 ## Changelog
 - 30/03/2023 Update unpaid invoice from date to create date, so every invoice generate its will send to customer. important update !
-- 06/08/2023 Add new ticket notification to whatsapp client
+- 06/08/2023 Add new ticket & reply ticket notification to whatsapp client
 
 ## Features
 - [OK] API Kirim Pesan ke Nomor
@@ -57,11 +57,15 @@
     # Nomor Invoice: {invoiceNumber}
     # Due Date: {duedate}
     # Total Tagihan: {duetotal}
+    # Tiket ID: {ticketID}
+    # Tiket title: {ticketTitle}
 
     invoice_unpaid = "Halo, *{firstName} {lastName}*"
     invoice_paid = "Halo, *{firstName} {lastName}*"
     invoice_duedate = "Halo, *{firstName} {lastName}*"
     invoice_comingTerminate = "Halo, *{firstName} {lastName}*"
+    new_ticket = "Halo, *{firstName} {lastName}*
+    reply_ticket = "Halo, *{firstName} {lastName}*
     ```
 - Login Whatsapp
     sebagai contoh, instalasi di path /var/www/Whatsapp-WHMCS
@@ -86,7 +90,7 @@
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_unpaid.py
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_duedate.py
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_comingTerminate.py
-    */5 * * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 new_ticket.py
+    */5 * * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 ticket.py
     ```
 # Endpoint
 - API Endpoint
