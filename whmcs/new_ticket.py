@@ -16,7 +16,7 @@ for x in resultNewTicket:
         phone = user[12].replace('.', '').replace('-', '')
         ticketID = x[1]
         ticketTitle = x[12]
-        messageToSend = template_message.invoice_unpaid.format(firstName = firstName,lastName = lastName,phone = phone, ticketID = ticketID, ticketTitle = ticketTitle)
+        messageToSend = template_message.new_ticket.format(firstName = firstName,lastName = lastName,phone = phone, ticketID = ticketID, ticketTitle = ticketTitle)
         url = 'http://127.0.0.1:8080/api/send'
         data = {'phone': phone, 'message': messageToSend}
         sendMessage = requests.post(url, json = data)
