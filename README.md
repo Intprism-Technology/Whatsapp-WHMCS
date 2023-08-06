@@ -1,6 +1,7 @@
 # Introduction
 ## Changelog
 - 30/03/2023 Update unpaid invoice from date to create date, so every invoice generate its will send to customer. important update !
+- 06/08/2023 Add new ticket notification to whatsapp client
 
 ## Features
 - [OK] API Kirim Pesan ke Nomor
@@ -85,6 +86,7 @@
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_unpaid.py
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_duedate.py
     0 8 * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 invoice_comingTerminate.py
+    */5 * * * * cd /var/www/Whatsapp-WHMCS/whmcs && /usr/bin/python3 new_ticket.py
     ```
 # Endpoint
 - API Endpoint
