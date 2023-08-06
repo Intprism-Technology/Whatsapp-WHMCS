@@ -40,7 +40,7 @@ for x in resultReplyTicket:
         sql = "SELECT * FROM tbltickets WHERE id = %s"
         access.execute(sql, (x[1],))
         ticketID = access.fetchall()
-        messageToSend = template_message.reply_ticket.format(firstName = firstName,lastName = lastName,phone = phone, ticketID = ticketID[0][1], ticketTitle = ticketTitle[0][12])
+        messageToSend = template_message.reply_ticket.format(firstName = firstName,lastName = lastName,phone = phone, ticketID = ticketID[0][1], ticketTitle = ticketID[0][12])
         url = 'http://127.0.0.1:8080/api/send'
         data = {'phone': phone, 'message': messageToSend}
         sendMessage = requests.post(url, json = data)
