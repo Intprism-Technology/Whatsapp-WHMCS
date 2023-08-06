@@ -36,9 +36,11 @@ for x in resultReplyTicket:
         firstName = user[2]
         lastName = user[3]
         phone = user[12].replace('.', '').replace('-', '')
-        ticketID = x[1]
-        ticketTitle = x[12]
-        messageToSend = template_message.reply_ticket.format(firstName = firstName,lastName = lastName,phone = phone, ticketID = ticketID, ticketTitle = ticketTitle)
+        #get ticket id
+        sql = "SELECT * FROM tbltickets WHERE id = %s"
+        access.execute(sql, (x[1],))
+        ticketID = access.fetchall()
+        messageToSend = template_message.reply_ticket.format(firstName = firstName,lastName = lastName,phone = phone, ticketID = ticketID[1], ticketTitle = ticketTitle[12])
         url = 'http://127.0.0.1:8080/api/send'
         data = {'phone': phone, 'message': messageToSend}
         sendMessage = requests.post(url, json = data)
