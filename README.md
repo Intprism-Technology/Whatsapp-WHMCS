@@ -31,6 +31,7 @@
     git clone git@github.com:Intprism-Technology/Whatsapp-WHMCS.git
     cd Whatsapp-WHMCS
     npm install
+    npm update
     ```
 - Konfigurasi DB MySQL
     ```
