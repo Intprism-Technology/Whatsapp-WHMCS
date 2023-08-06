@@ -30,7 +30,7 @@ access.execute("SELECT * FROM tblticketreplies WHERE date >= date_sub(now(), int
 resultReplyTicket = access.fetchall()
 for x in resultReplyTicket:
     sql = "SELECT * FROM tblclients WHERE id = %s"
-    access.execute(sql, (x[3],))
+    access.execute(sql, (x[2],))
     resultUser = access.fetchall()
     for user in resultUser:
         firstName = user[2]
