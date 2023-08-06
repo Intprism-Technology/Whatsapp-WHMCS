@@ -26,7 +26,7 @@ for x in resultNewTicket:
 
 # Reply ticket
 access = config.db.cursor()
-access.execute("SELECT * FROM `tblticketreplies` WHERE admin != "" AND date >= date_sub(now(), interval 5 minute)")
+access.execute("SELECT * FROM `tblticketreplies` WHERE admin != '' AND date >= date_sub(now(), interval 5 minute)")
 resultReplyTicket = access.fetchall()
 for x in resultReplyTicket:
     sql = "SELECT * FROM tbltickets WHERE id = %s"
