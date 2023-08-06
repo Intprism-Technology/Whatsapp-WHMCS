@@ -7,8 +7,8 @@ access = config.db.cursor()
 access.execute("SELECT * FROM tbltickets WHERE date >= date_sub(now(), interval 5 minute); ")
 resultNewTicket = access.fetchall()
 for x in resultNewTicket:
-    sql = "SELECT * FROM tblclients WHERE email = %s"
-    access.execute(sql, (x[7],))
+    sql = "SELECT * FROM tblclients WHERE id = %s"
+    access.execute(sql, (x[3],))
     resultUser = access.fetchall()
     for user in resultUser:
         firstName = user[2]
