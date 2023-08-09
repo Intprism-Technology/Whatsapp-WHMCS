@@ -29,11 +29,13 @@ access = config.db.cursor()
 access.execute("SELECT * FROM `tblticketreplies` WHERE admin != '' AND date >= date_sub(now(), interval 5 minute)")
 resultReplyTicket = access.fetchall()
 for x in resultReplyTicket:
+    #get ticket by id
     sql = "SELECT * FROM tbltickets WHERE id = %s"
     access.execute(sql, (x[1],))
     getTicket = access.fetchall()
+    #getUser by ticket
     sql = "SELECT * FROM tblclients WHERE id = %s"
-    access.execute(sql, (getTicket[0][2],))
+    access.execute(sql, (getTicket[0][3],))
     resultUser = access.fetchall()
     for user in resultUser:
         firstName = user[2]
