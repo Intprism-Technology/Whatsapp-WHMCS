@@ -11,11 +11,13 @@
     - Invoice Paid
     - Invoice DueDate
     - Last Notification 1day Before Terminate
+    - Ticket notification to user
 
 # Requirements
 - NodeJS V18
 - Python V3
 - Pip Python
+- Mariadb SQL Server
 
 # Install
 - Install NodeJS 
